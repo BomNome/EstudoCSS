@@ -40,7 +40,7 @@
 	animation-iteration-count: infinite;
 }
 
-/* Animation test*/
+/*Animation tests*/
 @keyframes anim-test{
 	from{left: 0px;}
 	50%{width: 200px; background-color: aqua;}
@@ -56,6 +56,9 @@
 	animation-name: anim-test;
 	animation-duration: 6s;
 	animation-iteration-count: infinite;
+}
+#animation-test2{
+	animation-timing-function: ease-in;
 }
 
 /*Timing Functions*/
@@ -88,19 +91,160 @@
 	animation-timing-function: ease-in-out;
 }
 
-/* Shorthand */
+/*Shorthand*/
 @keyframes anim5{
-	0%{left:0px;}
+	0%{left: 0px;}
 	25%{left: 20px; background-color: blue;}
 	60%{left: 100px; background-color: orange;}
-	100%{right: 20px; background-color: red;}
+	100%{left: 50px; background-color: red;}
 }
-
 #animation-div9{
 	background-color: darkblue;
 	width: 50px;
 	height: 50px;
 	position: relative;
-	animation-name: anim5;
-	animation-iteration-count: infinite;
+	animation: anim5 3s ease-out 4s infinite;
+}
+
+/*Transition*/
+.btn{
+	display: block;
+	position: relative;
+	padding: 10px;
+	margin-bottom: 25px;
+	width: 150px;
+	height: 75px;
+	color: #fff;
+	text-transform: uppercase;
+	background-color: #333;
+	border: 1px solid #333;
+	cursor: pointer;
+	transition: 1s;
+}
+.btn:hover{
+	color: #333;
+	background: #fff;
+}
+.transition{
+	width: 50px;
+	height: 100px;
+	background: #ff0000;
+	transition: 4s;
+}
+.transition:hover{
+	width: 300px;
+}
+
+/*Calc*/
+.div-calc{
+	height: 250px;
+	height: 260px;
+	position: relative;
+	background-color: #ddd;
+	border: 1px solid;
+	border-color: red;
+}
+.innerdiv-calc{
+	height: 50px;
+	margin: 10px;
+	position: relative;
+	background-color: red;
+}
+.calc1{
+	width: calc(50% + 50px);
+}
+.calc2{
+	width: calc(50% - 50px);
+}
+.calc3{
+	width: calc(50% * 2);
+	margin: 0;
+}
+.calc4{
+	width: calc(50% / 2);
+}
+
+/*Gradient*/
+.gradient-box{
+	width: 500px;
+	height: 200px;
+	position: relative;
+	margin: 20px;
+}
+
+/*Gradient Linear*/
+.gradient1{
+	background: linear-gradient(purple, blue);
+}
+.gradient2{
+	background: linear-gradient(to right, purple, blue);
+}
+.gradient3{
+	background: linear-gradient(to left, purple, blue);
+}
+.gradient4{
+	background: linear-gradient(to top, purple, blue);
+}
+.gradient5{
+	background: linear-gradient(to top right, purple, blue);
+}
+.gradient6{
+	background: linear-gradient(red, purple, blue);
+}
+
+/*Gradient Radial*/
+.radial1{
+	background: radial-gradient(purple, yellow, blue);
+}
+.radial2{
+	background: radial-gradient(purple 10%, yellow 30%, blue);
+}
+.radial3{
+	background: radial-gradient(circle, purple, yellow, blue);
+}
+
+/*Font Face*/
+@font-face {
+	font-family: Lage Grafica;
+	src: url(fonts/lage_grafica.ttf);
+}
+.fontface{
+	font-family: "Lage Grafica";
+}
+
+/*Media Query*/
+.mediaquery{
+	height: 200px;
+	width: 1200px;
+	background-color: red;
+}
+@media (max-width:1000px){
+	.mediaquery{
+		width: 500px;
+		background: blue;
+	}
+}
+@media (max-width:768px){
+	.mediaquery{
+		width: 300px;
+		background: green
+	}
+}
+
+/*Border Radius*/
+.div-border{
+	width: 100px;
+	height: 100px;
+	margin: 20px;
+	background-color: purple;
+}
+.border-radius1{
+	border-radius: 10px;
+}
+.border-radius2{
+	border-radius: 50%;
+}
+.border-radius3{
+	border-top-right-radius: 40px;
+	border-bottom-left-radius: 40px;
 }
